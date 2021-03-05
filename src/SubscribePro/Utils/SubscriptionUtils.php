@@ -48,10 +48,6 @@ class SubscriptionUtils
      */
     protected static function matchesShouldDisplayFilter(\SubscribePro\Service\Subscription\SubscriptionInterface $subscription)
     {
-        // Ignore cancelled subscriptions
-        if ($subscription->getStatus() == 'Cancelled') {
-            return false;
-        }
         // Ignore expired subscriptions
         if ($subscription->getStatus() == 'Expired') {
             return false;
